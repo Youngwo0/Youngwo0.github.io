@@ -19,7 +19,7 @@ use_math: true
 
 어떤 확률변수 X가 로그노말분포를 따른다는 것은 기호로 다음과 같이 씁니다.
 
-$$X \sim LN(\mu,\sigma^2)$$
+$X \sim LN(\mu,\sigma^2)$
 
 어떤 확률변수 $X$가 로그노말분포를 따를때, 확률변수 $X$는 다음을 만족합니다.
 
@@ -32,47 +32,29 @@ $$\ln(X) \sim N(\mu,\sigma^2)$$
 또한, CLT의 또다른 형태인 Mutiplicative CLT에도 활용될 수 있습니다.
 
 핵심적으로, 로그함수는 다음과 같이 쓸 수 있다는 점을 떠올려볼 수 있습니다.
-$$
-\frac{\Delta \ln x}{\Delta x} = \frac{1}{x}
-$$
-
-$$
-\Delta \ln x = \frac{\Delta x}{x}
-$$
+$$\frac{\Delta \ln x}{\Delta x} = \frac{1}{x}$$
+$$\Delta \ln x = \frac{\Delta x}{x}$$
 
 즉, 어떤 변수 $x$의 변화율을 우리는 $\ln x$로 쓸 수 있으며, $x$가 로그노말분포를 따른다고 가정하면 그 변화율은 정규분포를 따르는 것으로 생각할 수 있습니다.
 
 이를 금융공학의 영역에서 생각한다면, 주가의 분포를 로그노말분포로 가정함으로써 음수 주가의 가능성을 제거하는 한변, 주가의 변화율인 수익률이 합리적으로, 정규분포를 따른다는 가정까지 함께 가져갈 수 있게 되는 것입니다.
 
 이제 $\ln(X)$를 표준화하고, 식을 정리하면 표준정규분포를 따르는 $Z$ 또는 $\epsilon$에 대하여 다음과 같이 쓸 수 있습니다.
-$$
 
-Z = \frac{\ln(X)-\mu}{\sigma} \sim N(0,1)
+$$Z = \frac{\ln(X)-\mu}{\sigma} \sim N(0,1)$$
 
-$$
+$$X = e^{\mu+\sigma Z} = e^{\mu+\sigma \epsilon}, \epsilon \sim N(0,1)$$
 
-$$
+$$\ln(X) = \mu+\sigma \epsilon, \epsilon \sim N(0,1)$$
 
-X = e^{\mu+\sigma Z} = e^{\mu+\sigma \epsilon}, \epsilon \sim N(0,1)
-
-$$
-
-$$
-
-\ln(X) = \mu+\sigma \epsilon, \epsilon \sim N(0,1)
-
-$$
 ---
+
 ## 1. Log Normal Distribution의 CDF(Cumulative Distribution Function)
 
 
 정규분포의 CDF를 $\Phi_{\mu,\sigma^2}$라고 할 때, 로그노말분포를 따르는 확률변수 $X$의 CDF를 다음과 같이 쓸 수 있습니다.
 
-$$
-
-F(x) = \mathbb{P}(X \le x) = \mathbb{P}(\ln(X) \le \ln(x)) = \Phi_{\mu,\sigma^2}(\ln(x))
-
-$$
+$$F(x) = \mathbb{P}(X \le x) = \mathbb{P}(\ln(X) \le \ln(x)) = \Phi_{\mu,\sigma^2}(\ln(x))$$
 ---
 ## 2. Log Normal DIstribution의 PDF(Probability Density Function)
 
