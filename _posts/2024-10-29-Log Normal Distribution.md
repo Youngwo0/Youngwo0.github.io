@@ -3,6 +3,7 @@ title: Log Normal Distribution
 date: 2024-10-29 21:00:39 +09:00
 categories: [Math&Stat]
 tags: [Log Normal Distribution]
+use_math: true
 ---
 
 금융공학에 관련하여 공부했던 것들을 천천히 정리해나가고자 합니다.
