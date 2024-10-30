@@ -1,8 +1,12 @@
 ---
 title: Log Normal Distribution
 date: 2024-10-29 21:00:39 +09:00
-categories: [Math&Stat]
-tags: [Log Normal Distribution]
+categories:
+  - Math&Stat
+tags:
+  - Log
+  - Normal
+  - Distribution
 math: true
 ---
 
@@ -48,7 +52,7 @@ $$Z = \frac{\ln(X)-\mu}{\sigma} \sim N(0,1)$$
 
 $$X = e^{\mu+\sigma Z} = e^{\mu+\sigma \epsilon}, \epsilon \sim N(0,1)$$
 
-$$\ln(X) = \mu+\sigma \epsilon, \epsilon \sim N(0,1)$$
+$$\ln(X) = \mu+\sigma \epsilon$$
 
 ---
 
@@ -174,8 +178,6 @@ $$= e^{2\mu+\sigma^2}(e^{\sigma^2}-1)$$
 로그노말분포는 대표적인 모든 차수의 적률이 존재하지만 적률생성함수가 존재하지 않는 분포입니다.
 
 따라서 MGF를 구하는 대신, 각 모멘트를 통해 기댓값과 분산만 구하고 글을 마무리하고자 합니다.
-
-$e^{kt} \cdot \phi_{\mu,\sigma^2}(t)$로 일반화 해둔 부분을 활용하겠습니다.
 
 $$\mathbb{E}\left[X^n\right] = \int_0^\infty x^nf_X(x) dx = \int_0^\infty x^n \left( {1 \over x} \phi_{\mu,\sigma^2}(\ln(x))\right)dx$$
 
