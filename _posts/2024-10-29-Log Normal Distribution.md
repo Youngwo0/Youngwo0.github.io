@@ -3,6 +3,7 @@ title: Log Normal Distribution
 date: 2024-10-29 21:00:39 +09:00
 categories:
   - Math&Stat
+  - Statistics
 tags:
   - LogNormalDistribution
 math: true
