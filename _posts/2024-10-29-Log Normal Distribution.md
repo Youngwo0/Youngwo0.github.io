@@ -206,4 +206,4 @@ $$\mathbb{E}[X^n] = e^{n\mu + {1 \over 2} n^2 \sigma^2}$$
 
 ---
 ## [Reference]
-- https://en.wikipedia.org/wiki/Log-normal_distribution
+- [https://en.wikipedia.org/wiki/Log-normal_distribution](https://en.wikipedia.org/wiki/Log-normal_distribution)
