@@ -4,9 +4,7 @@ date: 2024-10-29 21:00:39 +09:00
 categories:
   - Math&Stat
 tags:
-  - Log
-  - Normal
-  - Distribution
+  - LogNormalDistribution
 math: true
 ---
 
@@ -204,9 +202,8 @@ $$\mathbb{E}[X^n] = e^{n\mu + {1 \over 2} n^2 \sigma^2}$$
 
 이상에서 로그노말분포에 관하여 살펴보았습니다.
 
-앞으로 올릴 포스팅에서 요긴하게 사용되었으면 좋겠네요.
+앞으로 올릴 포스팅에서 요긴하게 사용되기를 바랍니다.
 
 ---
 ## [Reference]
 - https://en.wikipedia.org/wiki/Log-normal_distribution
-- https://sine-qua-none.tistory.com/53
