@@ -2,10 +2,16 @@
 title: Log Normal Distribution
 date: 2024-10-29 21:00:39 +09:00
 categories:
-  - Math&Stat
-  - Statistics
+  - Learning & Tools
+  - Mathematics & Statistics
 tags:
   - LogNormalDistribution
+  - 확률분포
+  - 금융공학
+  - 통계학
+  - 정규분포
+  - 기댓값
+  - 분산
 math: true
 ---
 
