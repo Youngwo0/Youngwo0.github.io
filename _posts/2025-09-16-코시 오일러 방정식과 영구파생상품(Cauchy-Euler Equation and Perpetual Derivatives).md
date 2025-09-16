@@ -118,12 +118,7 @@ $$
 
 
 $$
-\mathrm{Black-Scholes \; Equation \; for \; time \; independant \; Derivatives \; :}
-$$
-
-
-$$
-{1 \over 2} \sigma^2 S^2 {d^2f \over dS^2} + rS{df \over dS} - rf = 0
+\mathrm{Black-Scholes \; Equation \; for \; time \; independant \; Derivatives \; : \;} {1 \over 2} \sigma^2 S^2 {d^2f \over dS^2} + rS{df \over dS} - rf = 0
 $$
 
 
