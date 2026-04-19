@@ -2,8 +2,8 @@
 title: 코시-오일러 방정식과 영구파생상품(Cauchy-Euler Equation and Perpetual Derivatives)
 date: 2025-09-16 22:43:05 +09:00
 categories:
-  - Quant & Markets
-  - Derivatives & Volatility
+  - Quant Notes
+  - Derivatives & Stochastic Calculus
 tags:
   - 코시-오일러 방정식
   - 영구파생상품
@@ -16,6 +16,7 @@ tags:
   - cauchy-euler equation
   - mathematical finance
 math: true
+featured: true
 ---
 
 # 1. 코시-오일러 방정식

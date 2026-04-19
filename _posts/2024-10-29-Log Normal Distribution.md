@@ -2,8 +2,8 @@
 title: Log Normal Distribution
 date: 2024-10-29 21:00:39 +09:00
 categories:
-  - Learning & Tools
-  - Mathematics & Statistics
+  - Quant Notes
+  - Mathematical Foundations
 tags:
   - LogNormalDistribution
   - 확률분포
@@ -13,6 +13,7 @@ tags:
   - 기댓값
   - 분산
 math: true
+featured: true
 ---
 
 금융공학에 관련하여 공부했던 것들을 천천히 정리해나가고자 합니다.

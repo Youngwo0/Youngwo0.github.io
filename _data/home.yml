@@ -1,0 +1,26 @@
+hero:
+  title: 금융공학을 공부하고 시장을 읽어갑니다
+  description: 파생상품, 확률과정, 금리와 환율, 시장 기사 해석, 연구 메모를 나중에 다시 꺼내볼 수 있게 차근차근 정리해두고자 합니다.
+  actions:
+    - label: About
+      url: /about/
+    - label: Categories
+      url: /categories/
+
+pillars:
+  - title: Quant Notes
+    description: 확률과정, 수학적 기초, 파생상품 가격결정을 직관에서 수식까지 정리합니다.
+    url: /categories/quant-notes/
+    cta: Browse Category
+  - title: Market Notes
+    description: 금리, 환율, 크레딧, 거시정책 관련 이슈를 요약보다 해석 중심으로 기록합니다.
+    url: /categories/market-notes/
+    cta: Browse Category
+  - title: Project Logs
+    description: 구현 과정, 연구 아이디어, 시행착오, 다음 단계를 다시 이어 쓸 수 있게 남겨 둡니다.
+    url: /project-logs/
+    cta: Open Page
+
+sections:
+  featured_title: 먼저 읽어볼 글
+  latest_title: 최근 글

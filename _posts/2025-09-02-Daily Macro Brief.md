@@ -1,9 +1,10 @@
 ---
 title: 2025.09.02 Daily Macro Brief
 date: 2025-09-02 09:00:00 +09:00
+permalink: /posts/2025-09-02-daily-macro-brief/
 categories:
-  - Quant & Markets
-  - Macro & Fixed Income
+  - Market Notes
+  - Macro & Rates
 tags:
   - 매크로 경제
   - 중국 경제

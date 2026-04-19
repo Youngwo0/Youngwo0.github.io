@@ -2,8 +2,8 @@
 title: Square of Sigma
 date: 2024-10-31 21:00:39 +09:00
 categories:
-  - Learning & Tools
-  - Mathematics & Statistics
+  - Quant Notes
+  - Mathematical Foundations
 tags:
   - 시그마
   - 수학

@@ -10,7 +10,7 @@ baseurl: ""
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
-lang: en
+lang: ko-KR
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: Asia/Seoul
@@ -18,12 +18,12 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Almost_Surely # the main title
+title: Almost Surely # the main title
 
-tagline: Hedging My Bets on Knowledge # it will display as the sub-title
+tagline: 금융공학, 시장, 연구 노트 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A blog about quantitative finance, derivatives, mathematics, computer science, and everything in between.
+  금융공학, 시장 해석, 연구 메모를 차근차근 쌓아가는 공개 아카이브입니다.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://Youngwo0.github.io"
@@ -177,6 +177,7 @@ compress_html:
 exclude:
   - "*.gem"
   - "*.gemspec"
+  - notes
   - tools
   - README.md
   - CHANGELOG.md

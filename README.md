@@ -1,97 +1,56 @@
-<div align="center">
+# Youngwo0.github.io
 
-  # Chirpy Jekyll Theme
+정량금융, 파생상품, 확률과정, 시장 해석, 프로젝트 로그를 축적하는 Jekyll 기반 블로그 저장소.
 
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+이 저장소는 단순한 개인 블로그가 아니라 다음 목적을 가진 공개 지식 베이스를 지향한다.
 
-  [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy?color=brightgreen)](https://rubygems.org/gems/jekyll-theme-chirpy)
-  [![CI](https://github.com/cotes2020/jekyll-theme-chirpy/actions/workflows/ci.yml/badge.svg)](https://github.com/cotes2020/jekyll-theme-chirpy/actions/workflows/ci.yml)
-  [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4e556876a3c54d5e8f2d2857c4f43894)](https://www.codacy.com/gh/cotes2020/jekyll-theme-chirpy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cotes2020/jekyll-theme-chirpy&amp;utm_campaign=Badge_Grade)
-  [![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy.svg)](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE)
-  [![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg)](https://996.icu)
+- 공부한 내용을 다시 설명할 수 있을 정도로 구조화하기
+- 시장과 개념을 해석하는 사고 과정을 남기기
+- 인터뷰, 프로젝트, 발표에 다시 활용할 수 있는 포트폴리오 만들기
 
-  [**Live Demo →**][demo]
+## 콘텐츠 구조
 
-  [![Devices Mockup](https://chirpy-img.netlify.app/commons/devices-mockup.png)][demo]
+- `_posts`
+  - 발행된 글
+- `_drafts`
+  - 발행 전 원고
+- `notes`
+  - 원시 메모, 분류 초안, 발행 전 소스 노트
 
-</div>
+## 현재 카테고리 원칙
 
-## Features
+- `Quant Notes`
+  - `Mathematical Foundations`
+  - `Derivatives & Stochastic Calculus`
+- `Market Notes`
+  - `Macro & Rates`
+  - `FX & Cross-Asset`
+  - `Credit & Structured Products`
+- `Project Logs`
+  - `Research Notes`
+- `Reading Notes`
+  - `Books & Papers`
 
-<details>
-  <summary>
-    <i>Click to check out the features</i>
-  </summary>
-  <p>
+## 글 작성 워크플로우
 
-  - Dark/Light Theme Mode
-  - Localized UI language
-  - Pinned Posts
-  - Hierarchical Categories
-  - Trending Tags
-  - Table of Contents
-  - Last Modified Date of Posts
-  - Syntax Highlighting
-  - Mathematical Expressions
-  - Mermaid Diagram & Flowchart
-  - Dark/Light Mode Images
-  - Embed Videos
-  - Disqus/Utterances/Giscus Comments
-  - Search
-  - Atom Feeds
-  - Google Analytics
-  - Page Views Reporting
-  - SEO & Performance Optimization
+1. 아이디어와 자료는 `notes/`에 모은다.
+2. 발행 후보는 `_drafts/`에서 구조를 잡는다.
+3. 검토가 끝난 글만 `_posts/`로 옮긴다.
 
-  </p>
-</details>
+## 글쓰기 원칙
 
-## Documentation
+- 기본 언어는 한국어
+- 영어는 필요한 경우에만 짧게 보조적으로 사용
+- 직관을 먼저 설명하고, 수식과 형식화를 뒤에 둔다
+- 기술적 모호성은 감추지 않고 명시한다
+- 시장 글은 기사 요약보다 해석과 의미를 남긴다
 
-To explore usage, development, and upgrade guide of the project, please refer to
-the [Wiki][wiki].
+## 로컬 실행
 
-## Contributing
+```bash
+bundle exec jekyll serve
+```
 
-Welcome to report bugs, help improve the code or submit new features.
-For more information, please see the ["Contributing Guidelines"][contribute-guide].
+## 테마
 
-## Credits
-
-This theme is mainly built with [Jekyll][jekyllrb] ecosystem,
-[Bootstrap][bootstrap], [Font Awesome][icons] and some other [wonderful tools][lib].
-The avatar and favicon design come from [Clipart Max][image].
-
-Thanks to all the [contributors][contributors]. Also, folks who submitted issues
-or unmerged PRs should not be forgotten. Because they reported bugs, shared ideas,
-or inspired me to write more readable documentation.
-
-Last but not least, thanks to [JetBrains][jetbrains] for providing the
-_Open Source Development_ license.
-
-## Sponsoring
-
-If you would like to sponsor this project, the following options are available.
-
-[![Ko-fi](https://img.shields.io/badge/-Buy%20Me%20a%20Coffee-ff5f5f?logo=ko-fi&logoColor=white)](https://ko-fi.com/coteschung)
-[![Wechat Pay](https://img.shields.io/badge/-Tip%20Me%20on%20WeChat-brightgreen?logo=wechat&logoColor=white)][donation]
-[![Alipay](https://img.shields.io/badge/-Tip%20Me%20on%20Alipay-blue?logo=alipay&logoColor=white)][donation]
-
-## License
-
-This work is published under [MIT][mit] License.
-
-<!-- ReadMe links -->
-
-[jekyllrb]: https://jekyllrb.com/
-[bootstrap]: https://getbootstrap.com/
-[icons]: https://fontawesome.com/
-[image]: https://www.clipartmax.com/middle/m2i8b1m2K9Z5m2K9_ant-clipart-childrens-ant-cute/
-[demo]: https://cotes2020.github.io/chirpy-demo/
-[wiki]: https://github.com/cotes2020/jekyll-theme-chirpy/wiki
-[contribute-guide]: https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/.github/CONTRIBUTING.md
-[contributors]: https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors
-[lib]: https://github.com/cotes2020/chirpy-static-assets
-[jetbrains]: https://www.jetbrains.com/?from=jekyll-theme-chirpy
-[donation]: https://sponsor.cotes.page/
-[mit]: https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE
+테마는 `jekyll-theme-chirpy`를 기반으로 사용한다. 다만 저장소의 정보구조, 카테고리, 홈 화면, 소개 페이지는 블로그 목적에 맞게 커스터마이즈한다.
