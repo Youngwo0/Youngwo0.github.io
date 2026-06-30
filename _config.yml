@@ -20,10 +20,10 @@ timezone: Asia/Seoul
 
 title: Almost Surely # the main title
 
-tagline: 금융공학, 시장, 연구 노트 # it will display as the sub-title
+tagline: Markets, Models, Measures # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  금융공학, 시장 해석, 연구 메모를 차근차근 쌓아가는 공개 아카이브입니다.
+  금융공학, 자산가격론, 금리·환율·크레딧 시장 해석을 수식과 짧은 리서치 노트로 정리하는 개인 아카이브입니다.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://Youngwo0.github.io"

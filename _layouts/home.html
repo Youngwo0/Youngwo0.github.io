@@ -36,21 +36,42 @@ layout: page
 {% endif %}
 
 <section class="home-hero">
-  {% if site.data.home.hero.eyebrow %}
-    <p class="home-hero__eyebrow">{{ site.data.home.hero.eyebrow }}</p>
-  {% endif %}
-  <h1>{{ site.data.home.hero.title }}</h1>
-  <p class="home-hero__lede">{{ site.data.home.hero.description }}</p>
+  <div class="home-hero__inner">
+    <div class="home-hero__copy">
+      {% if site.data.home.hero.eyebrow %}
+        <p class="home-hero__eyebrow">{{ site.data.home.hero.eyebrow }}</p>
+      {% endif %}
+      <h1>{{ site.data.home.hero.title }}</h1>
+      <p class="home-hero__lede">{{ site.data.home.hero.description }}</p>
 
-  <div class="home-hero__actions">
-    {% for action in site.data.home.hero.actions %}
-      <a class="btn btn-outline-secondary btn-sm" href="{{ action.url | relative_url }}">{{ action.label }}</a>
-    {% endfor %}
+      <div class="home-hero__actions">
+        {% for action in site.data.home.hero.actions %}
+          <a class="btn btn-outline-secondary btn-sm" href="{{ action.url | relative_url }}">{{ action.label }}</a>
+        {% endfor %}
+      </div>
+    </div>
   </div>
 
+  {% if site.data.home.hero.signals %}
+    <dl class="home-hero__signals">
+      {% for signal in site.data.home.hero.signals %}
+        <div>
+          <dt>{{ signal.label }}</dt>
+          <dd>{{ signal.value }}</dd>
+        </div>
+      {% endfor %}
+    </dl>
+  {% endif %}
+
+</section>
+
+<section class="home-section home-pillars" aria-label="Research areas">
   <div class="home-pillar-grid">
     {% for pillar in site.data.home.pillars %}
       <a class="home-pillar home-pillar--link" href="{{ pillar.url | relative_url }}">
+        {% if pillar.label %}
+          <span class="home-pillar__index">{{ pillar.label }}</span>
+        {% endif %}
         <h2>{{ pillar.title }}</h2>
         <p>{{ pillar.description }}</p>
         <span class="home-pillar__cta">{{ pillar.cta }}</span>
@@ -93,7 +114,7 @@ layout: page
 
   <div id="post-list">
     {% for post in posts %}
-      <div class="post-preview">
+      <article class="post-preview">
         <h1>
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </h1>
@@ -127,7 +148,7 @@ layout: page
             </div>
           {% endif %}
         </div>
-      </div>
+      </article>
     {% endfor %}
   </div>
 </section>

@@ -11,39 +11,14 @@
     static get ID() { return "mode-toggle"; }
 
     constructor() {
-      if (this.hasMode) {
-        if (this.isDarkMode) {
-          if (!this.isSysDarkPrefer) {
-            this.setDark();
-          }
-        } else {
-          if (this.isSysDarkPrefer) {
-            this.setLight();
-          }
-        }
-      }
+      this.applyMode();
 
       let self = this;
 
-      /* always follow the system prefers */
+      /* Keep the explicit user choice stable when system preference changes. */
       this.sysDarkPrefers.addEventListener("change", () => {
-        if (self.hasMode) {
-          if (self.isDarkMode) {
-            if (!self.isSysDarkPrefer) {
-              self.setDark();
-            }
-
-          } else {
-            if (self.isSysDarkPrefer) {
-              self.setLight();
-            }
-          }
-
-          self.clearMode();
-        }
-
+        self.applyMode();
         self.notify();
-
       });
 
     } /* constructor() */
@@ -58,30 +33,45 @@
 
     get hasMode() { return this.mode != null; }
 
-    get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); }
+    get mode() {
+      return localStorage.getItem(ModeToggle.MODE_KEY)
+        || sessionStorage.getItem(ModeToggle.MODE_KEY);
+    }
 
     /* get the current mode on screen */
     get modeStatus() {
-      if (this.isDarkMode
-        || (!this.hasMode && this.isSysDarkPrefer)) {
+      if (this.isDarkMode) {
         return ModeToggle.DARK_MODE;
       } else {
         return ModeToggle.LIGHT_MODE;
       }
     }
 
+    applyMode() {
+      if (this.isDarkMode) {
+        this.setDark();
+      } else if (this.isLightMode) {
+        this.setLight();
+      } else {
+        this.clearMode();
+      }
+    }
+
     setDark() {
       $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
+      localStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
+      sessionStorage.removeItem(ModeToggle.MODE_KEY);
     }
 
     setLight() {
       $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
+      localStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
+      sessionStorage.removeItem(ModeToggle.MODE_KEY);
     }
 
     clearMode() {
       $('html').removeAttr(ModeToggle.MODE_ATTR);
+      localStorage.removeItem(ModeToggle.MODE_KEY);
       sessionStorage.removeItem(ModeToggle.MODE_KEY);
     }
 
@@ -98,28 +88,10 @@
   const toggle = new ModeToggle();
 
   function flipMode() {
-    if (toggle.hasMode) {
-      if (toggle.isSysDarkPrefer) {
-        if (toggle.isLightMode) {
-          toggle.clearMode();
-        } else {
-          toggle.setLight();
-        }
-
-      } else {
-        if (toggle.isDarkMode) {
-          toggle.clearMode();
-        } else {
-          toggle.setDark();
-        }
-      }
-
+    if (toggle.modeStatus === ModeToggle.DARK_MODE) {
+      toggle.setLight();
     } else {
-      if (toggle.isSysDarkPrefer) {
-        toggle.setLight();
-      } else {
-        toggle.setDark();
-      }
+      toggle.setDark();
     }
 
     toggle.notify();
