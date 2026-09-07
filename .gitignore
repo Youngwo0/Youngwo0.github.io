@@ -20,3 +20,5 @@ package-lock.json
 
 # MOC File
 Category.md
+# macOS
+.DS_Store
