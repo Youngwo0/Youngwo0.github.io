@@ -1,0 +1,21 @@
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="{{ '/' | relative_url }}">
+      <span class="nav-mark" aria-hidden="true"></span>
+      <span class="nav-title">Almost Surely</span>
+    </a>
+    <nav class="nav-links">
+      <a href="{{ '/writing/' | relative_url }}" {% if page.url contains '/writing' or page.layout == 'post' %}class="active"{% endif %}>Writing</a>
+      <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About</a>
+      <a href="{{ '/archive/' | relative_url }}" {% if page.url == '/archive/' %}class="active"{% endif %}>Archive</a>
+    </nav>
+    <button class="nav-mobile-toggle" aria-label="메뉴" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav-mobile-menu" aria-hidden="true">
+    <a href="{{ '/writing/' | relative_url }}">Writing</a>
+    <a href="{{ '/about/' | relative_url }}">About</a>
+    <a href="{{ '/archive/' | relative_url }}">Archive</a>
+  </nav>
+</header>
