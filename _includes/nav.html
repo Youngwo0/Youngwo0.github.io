@@ -6,6 +6,7 @@
     </a>
     <nav class="nav-links">
       <a href="{{ '/writing/' | relative_url }}" {% if page.url contains '/writing' or page.layout == 'post' %}class="active"{% endif %}>Writing</a>
+      <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects' %}class="active"{% endif %}>Projects</a>
       <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About</a>
       <a href="{{ '/archive/' | relative_url }}" {% if page.url == '/archive/' %}class="active"{% endif %}>Archive</a>
     </nav>
@@ -15,6 +16,7 @@
   </div>
   <nav class="nav-mobile-menu" aria-hidden="true">
     <a href="{{ '/writing/' | relative_url }}">Writing</a>
+    <a href="{{ '/projects/' | relative_url }}">Projects</a>
     <a href="{{ '/about/' | relative_url }}">About</a>
     <a href="{{ '/archive/' | relative_url }}">Archive</a>
   </nav>

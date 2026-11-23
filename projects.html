@@ -1,0 +1,26 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+<div class="projects-header">
+  <h1 class="projects-title">Projects.</h1>
+  <p class="projects-desc">Implementations, numerical experiments, and quantitative research.</p>
+</div>
+
+<div class="projects-list">
+  {% assign sorted_projects = site.projects | sort: "order" %}
+  {% for project in sorted_projects %}
+  <a href="{{ project.url | relative_url }}" class="project-card">
+    <div class="project-card-index">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</div>
+    <div class="project-card-body">
+      <p class="project-card-domain">{{ project.domain }}</p>
+      <h2 class="project-card-title">{{ project.title }}</h2>
+      {% if project.summary %}<p class="project-card-summary">{{ project.summary }}</p>{% endif %}
+    </div>
+    <div class="project-card-arrow">→</div>
+  </a>
+  {% else %}
+  <p class="projects-empty">No projects yet.</p>
+  {% endfor %}
+</div>
