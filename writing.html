@@ -1,0 +1,39 @@
+---
+layout: default
+title: Writing
+permalink: /writing/
+---
+
+<div class="writing-header">
+  <h1 class="writing-title">Writing</h1>
+  <div class="filter-row">
+    <button class="filter-chip active" data-category="all">All</button>
+    <button class="filter-chip" data-category="Asset Pricing">Asset Pricing</button>
+    <button class="filter-chip" data-category="Rates & Derivatives">Rates &amp; Derivatives</button>
+    <button class="filter-chip" data-category="FX & Macro">FX &amp; Macro</button>
+    <button class="filter-chip" data-category="Mathematical Methods">Mathematical Methods</button>
+  </div>
+</div>
+
+<div class="writing-list">
+  {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% for year in years %}
+  <div class="year-group">
+    <p class="year-label">{{ year.name }}</p>
+    {% for post in year.items %}
+      {% unless post.listed == false %}
+      {% assign cat = post.categories | last %}
+      <article class="post-row" data-category="{{ cat }}">
+        <div class="post-eyebrow">
+          <span class="post-topic">{{ cat }}</span>
+          {% if post.note_type %}<span class="post-type-badge">{{ post.note_type }}</span>{% endif %}
+          <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time>
+        </div>
+        <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        {% if post.description %}<p class="post-desc">{{ post.description }}</p>{% endif %}
+      </article>
+      {% endunless %}
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>

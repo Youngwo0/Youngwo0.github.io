@@ -1,4 +1,5 @@
 ---
+listed: false
 title: 2025.09.02 Daily Macro Brief
 date: 2025-09-02 09:00:00 +09:00
 permalink: /posts/2025-09-02-daily-macro-brief/
@@ -20,6 +21,7 @@ tags:
   - geopolitics
   - corporate finance
 ---
+listed: false
 
 # 1. Market/ Macro/ Policy
 
