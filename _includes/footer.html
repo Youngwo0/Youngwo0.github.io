@@ -1,10 +1,24 @@
 <footer class="site-footer">
   <div class="footer-inner">
-    <p class="footer-bio">Economics undergraduate at Seoul National University. Writing to understand markets, models, and the mathematics behind them.</p>
-    <div class="footer-links">
-      <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="{{ '/about/' | relative_url }}">About</a>
+    <div class="footer-left">
+      <p class="footer-name">Youngwoo Lee</p>
+      <p class="footer-bio">Equity Derivatives · Interest Rates · FX<br>Seoul National University</p>
     </div>
+    <nav class="footer-nav">
+      <div class="footer-nav-col">
+        <a href="{{ '/writing/' | relative_url }}">Writing</a>
+        <a href="{{ '/projects/' | relative_url }}">Projects</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+        <a href="{{ '/archive/' | relative_url }}">Archive</a>
+      </div>
+      <div class="footer-nav-col">
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="/assets/cv.pdf" target="_blank" rel="noopener">CV</a>
+      </div>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© {{ 'now' | date: "%Y" }} Youngwoo Lee</span>
   </div>
 </footer>
