@@ -714,9 +714,9 @@ img { max-width: 100%; display: block; }
 .footer-left { flex: 1; }
 
 .footer-name {
-  font-family: var(--font-serif);
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   margin-bottom: 6px;
 }
 
