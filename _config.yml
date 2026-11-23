@@ -39,7 +39,7 @@ defaults:
     values:
       layout: post
       toc: true
-      permalink: /writing/:title/
+      permalink: /posts/:title/
   - scope:
       path: ""
       type: pages

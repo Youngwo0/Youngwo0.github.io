@@ -1,4 +1,5 @@
 ---
+listed: false
 title: 2025.09.03 Daily Macro Brief
 date: 2025-09-03 09:00:00 +09:00
 permalink: /posts/2025-09-03-daily-macro-brief/
@@ -18,6 +19,7 @@ tags:
   - government bonds
   - political turmoil
 ---
+listed: false
 
 # 1. Market/ Macro/ Policy
 

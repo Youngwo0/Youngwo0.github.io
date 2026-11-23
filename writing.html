@@ -21,9 +21,7 @@ permalink: /writing/
   <div class="year-group">
     <p class="year-label">{{ year.name }}</p>
     {% for post in year.items %}
-      {% assign cats = post.categories | join: " " %}
-      {% assign title_lower = post.title | downcase %}
-      {% unless cats contains "Daily Brief" or cats contains "Daily Macro Brief" or title_lower contains "daily" or title_lower contains "summary" %}
+      {% unless post.listed == false %}
       {% assign cat = post.categories | last %}
       <article class="post-row" data-category="{{ cat }}">
         <div class="post-eyebrow">

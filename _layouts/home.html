@@ -18,9 +18,7 @@ layout: default
     {% assign featured_all = site.posts %}
     {% assign featured = "" | split: "" %}
     {% for post in featured_all %}
-      {% assign cats = post.categories | join: " " %}
-      {% assign title_lower = post.title | downcase %}
-      {% unless cats contains "Daily Brief" or cats contains "Daily Macro Brief" or title_lower contains "daily" or title_lower contains "summary" %}
+      {% unless post.listed == false %}
         {% assign featured = featured | push: post %}
       {% endunless %}
       {% if featured.size >= 5 %}{% break %}{% endif %}
