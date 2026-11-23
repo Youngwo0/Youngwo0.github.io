@@ -32,6 +32,11 @@ kramdown:
     block:
       line_numbers: false
 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
 defaults:
   - scope:
       path: ""
@@ -45,6 +50,11 @@ defaults:
       type: pages
     values:
       layout: page
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
 
 # 메인 Writing 목록에서 제외할 카테고리 (Daily Brief 계열)
 hidden_categories:
