@@ -8,10 +8,16 @@ permalink: /writing/
   <h1 class="writing-title">Writing</h1>
   <div class="filter-row">
     <button class="filter-chip active" data-category="all">All</button>
-    <button class="filter-chip" data-category="Asset Pricing">Asset Pricing</button>
-    <button class="filter-chip" data-category="Rates & Derivatives">Rates &amp; Derivatives</button>
-    <button class="filter-chip" data-category="FX & Macro">FX &amp; Macro</button>
-    <button class="filter-chip" data-category="Mathematical Methods">Mathematical Methods</button>
+    {% assign chip_cats = "" | split: "" %}
+    {% for post in site.posts %}
+      {% unless post.listed == false %}
+        {% assign c = post.categories | last %}
+        {% if c and chip_cats contains c %}{% elsif c %}{% assign chip_cats = chip_cats | push: c %}{% endif %}
+      {% endunless %}
+    {% endfor %}
+    {% for c in chip_cats %}
+    <button class="filter-chip" data-category="{{ c | escape }}">{{ c | escape }}</button>
+    {% endfor %}
   </div>
 </div>
 
@@ -23,7 +29,7 @@ permalink: /writing/
     {% for post in year.items %}
       {% unless post.listed == false %}
       {% assign cat = post.categories | last %}
-      <article class="post-row" data-category="{{ cat }}">
+      <article class="post-row" data-category="{{ cat | escape }}">
         <div class="post-eyebrow">
           <span class="post-topic">{{ cat }}</span>
           {% if post.note_type %}<span class="post-type-badge">{{ post.note_type }}</span>{% endif %}
