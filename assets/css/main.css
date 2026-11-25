@@ -570,16 +570,9 @@ img { max-width: 100%; display: block; }
   margin-bottom: 6px;
 }
 
-.post-content .env-theorem .env-label,
-.post-content .env-proposition .env-label,
-.post-content .env-lemma .env-label {
-  font-style: normal;
-}
-
 .post-content .env-theorem p,
 .post-content .env-proposition p,
 .post-content .env-lemma p {
-  font-style: italic;
   color: var(--ink);
   margin-bottom: 0;
 }
