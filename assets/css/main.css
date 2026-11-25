@@ -23,12 +23,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #18191A;
+    --paper: #0D0D0C;
     --ink: #E8E6E1;
     --muted: #8A8A85;
-    --divider: #2E2E2B;
-    --bg-soft: #202120;
-    --code-bg: #1E1E1C;
+    --divider: #242422;
+    --bg-soft: #161615;
+    --code-bg: #141413;
   }
 }
 
